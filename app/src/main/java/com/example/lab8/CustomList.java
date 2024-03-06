@@ -64,9 +64,26 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+    /**
+     * This returns whether or not a city is already in the list.
+     * @param city
+     * This is the city to be checked.
+     * @return
+     * Returns a boolean, false if it is not in, true otherwise.
+     */
     public boolean hasCity(City city){
         return cities.contains(city);
     }
 
-
+    /**
+     * This method throws an exception if trying to delete a city that does not exist in the list, otherwise the delete happens.
+     * @param city
+     * The city to be deleted.
+     */
+    public void deleteCity(City city){
+        if (!hasCity(city)){
+            throw new IllegalArgumentException();
+        }
+       // cities.remove(city);
+    }
 }
