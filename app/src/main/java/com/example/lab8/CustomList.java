@@ -1,5 +1,7 @@
 package com.example.lab8;
 
+import static java.lang.Boolean.TRUE;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +55,6 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.size();
     }
 
-
     /**
      * this adds a city object to the list
      *the second phase, you can add the
@@ -61,6 +62,11 @@ public class CustomList extends ArrayAdapter<City> {
      */
     public void addCity(City city){
         cities.add(city);
+    }
+
+    public boolean hasCity(City city){
+        //return cities.contains(city);
+        return TRUE;
     }
 
 
